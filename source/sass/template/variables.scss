@@ -1,13 +1,16 @@
-$c-text-main: #000000;
-$c-link-main: #006688;
+$c-text-main: #333333;
+$c-text-second: #222222;
+$c-link-main: #631421;
 $c-link-hover: lighten($c-link-main, 20%);
-$c-button-main: #ee8800;
+$c-button-main: #631421;
 $c-button-hover: lighten($c-link-main, 20%);
+$c-elem-main: #631421;
+$c-elem-second: #CFAF7D;
 $c-bg-main: #ffffff;
-$c-bg-gray: #f0f0f0;
-$c-border: #cccccc;
+$c-bg-gray: #FAFAFA;
+$c-border: #631421;
 
-$font-main: "MuseoSansCyrl", "Arial", sans-serif;
+$font-main: "Spectral", "Times New Roman", serif;
 $font-second: "PTMono", "Arial", sans-serif;
 
 $mobile-max: 767px;

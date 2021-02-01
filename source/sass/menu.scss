@@ -1,0 +1,262 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+
+    @include tablets_1024 {
+        height: auto;
+        min-height: 80px;
+        padding: 20px 0;
+    }
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+
+    @include tablets_1024 {
+        display: none;
+        flex-direction: column;
+    }
+
+    @include phones__768 {
+        position: absolute;
+        top: 91px;
+        left: 0;
+        background: #ffffff;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.menu__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+
+    @include tablets_1024 {
+        margin-left: 10px;
+    }
+}
+
+.menu__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+    transition: 0.5s;
+
+    &.active .menu__arrow {
+        transform: rotate(225deg);
+    }
+
+    @include tablets_1024 {
+        display: block;
+        height: auto;
+    }
+
+    &:first-child {
+
+        @include phones__768 {
+            padding-top: 10px;
+        }
+    }
+
+    &:last-child {
+
+        @include phones__768 {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.menu__item:not(:last-child) {
+    @include tablets_1024 {
+        margin-bottom: 20px;
+    }
+}
+
+.menu__item ul {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    min-width: 292px;
+    padding: 12px;
+    border: 1px solid $c-elem-second;
+    background-color: #ffffff;
+    z-index: 10;
+
+    @include tablets_1024 {
+        position: relative;
+        top: auto;
+        left: auto;
+        border: none;
+    }
+}
+
+.menu__subitem {
+    padding-bottom: 8px;
+
+    & a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.menu__subitem:not(:last-child) {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F7F4ED;
+
+    @include tablets_1024 {
+        border: none;
+    }
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    font-family: $font-main;
+    font-size: 18px;
+    line-height: 27px;
+    color: $c-text-main;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+        color: $c-link-hover;
+
+        @include tablets_1024 {
+            color: $c-text-main;
+        }
+    }
+
+    @include tablets_1024 {
+        justify-content: center;
+    }
+
+    &.active {
+        color: $c-link-main;
+    }
+}
+
+.menu__articles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 60px;
+    font-family: $font-main;
+    margin-right: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $c-link-main;
+    text-decoration: none;
+    border: 1px solid $c-border;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    .icon-user {
+        display: block;
+    }
+
+    @include desktop_1366 {
+        margin-right: 30px;
+    }
+
+    @include tablets_1024 {
+        width: 200px;
+        height: 50px;
+    }
+
+    @include phones__480 {
+        display: none;
+    }
+
+    &--phone {
+        display: none;
+
+        @include phones__480 {
+            display: flex;
+            margin: 20px auto 0;
+        }
+    }
+}
+
+.menu__languages {
+    display: flex;
+    margin-left: 60px;
+
+    @include desktop_1366 {
+        margin-left: 30px;
+    }
+}
+
+.menu__language {
+    padding: 5px;
+    font-family: $font-second;
+    font-size: 14px;
+    line-height: 18px;
+    color: $c-text-main;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &.active {
+        color: #ffffff;
+        background-color: $c-elem-main;
+    }
+
+    &:hover {
+        color: #ffffff;
+        background-color: $c-elem-main;
+    }
+}
+
+.menu__arrow {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-left: 8px;
+    border-right: 1px solid $c-text-main;
+    border-bottom: 1px solid $c-text-main;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.menu__link-button {
+    position: relative;
+    transform: translate(-10px, 0);
+
+    &:after {
+        @include pseudo;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        right: 0;
+        transform: translate(22px, -45%) rotate(-45deg);
+        border-bottom: 1px solid $c-border;
+        border-right: 1px solid $c-border;
+    }
+}
+
+.icon-login {
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,89 @@
+.news {
+    padding: 200px 0 190px;
+
+    @include phones__768 {
+        padding: 50px 0 60px;
+    }
+}
+
+.news__title {
+    margin-bottom: 100px;
+
+    @include phones__768 {
+        margin-bottom: 40px;
+    }
+}
+
+.news__item {
+    position: relative;
+    display: block;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    font-family: $font-main;
+    font-size: 24px;
+    line-height: 37px;
+    color: $c-text-second;
+    text-decoration: none;
+    border-bottom: 1px solid $c-border;
+    transition: 0.5s;
+
+    @include phones__768 {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.news__arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid $c-border;
+    border-right: 2px solid $c-border;
+    transform: translate(0, -50%) rotate(-45deg);
+
+    @include phones__768 {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.news__link {
+    position: relative;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: $c-link-main;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+
+    @include phones__768 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &:before {
+        @include pseudo;
+        top: 50%;
+        right: -20px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 1px solid $c-border;
+        border-right: 1px solid $c-border;
+        transform: translate(0, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+}

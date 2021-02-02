@@ -1,0 +1,61 @@
+.mission {
+    padding: 120px 0 160px;
+    background-color: $c-elem-main;
+
+    @include phones__768 {
+        padding: 50px 0 60px;
+    }
+}
+
+.mission__flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets_1024 {
+        flex-direction: column;
+    }
+}
+
+.mission__title {
+    max-width: 235px;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 78px;
+    color: #ffffff;
+
+    @include tablets_1024 {
+        max-width: 100%;
+        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    @include phones__768 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+.mission__description {
+    max-width: 765px;
+    padding-right: 75px;
+    font-size: 22px;
+    line-height: 33px;
+    color: #ffffff;
+
+    @include desktop_1200 {
+        max-width: 695px;
+        padding-right: 0;
+    }
+
+    @include tablets_1024 {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    @include phones__768 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

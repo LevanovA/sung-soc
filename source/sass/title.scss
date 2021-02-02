@@ -1,6 +1,21 @@
 .title {
-    font-size: 34px;
-    line-height: 44px;
+    position: relative;
+    font-size: 56px;
+    line-height: 78px;
     font-weight: bold;
-    color: $c-text-main;
+    color: $c-link-main;
+
+    @include phones__768 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    &:after {
+        @include pseudo();
+        left: 0;
+        bottom: 0;
+        width: 46px;
+        height: 1px;
+        background-color: $c-elem-second;
+    }
 }

@@ -2,6 +2,14 @@
     padding-top: 20px;
     padding-bottom: 100px;
     background-color: $c-bg-gray;
+    background-image: url("../img/banner-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop_1366 {
+        background-size: 90%;
+        background-position: center 100px;
+    }
 }
 
 .banner__issn {

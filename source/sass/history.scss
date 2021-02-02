@@ -1,0 +1,59 @@
+.history {
+    padding-bottom: 200px;
+
+    @include phones__768 {
+        padding-bottom: 50px;
+    }
+}
+
+.history__flex {
+    display: flex;
+
+    @include tablets_1024 {
+        flex-direction: column;
+    }
+}
+
+.history__title {
+    max-width: 350px;
+    margin-right: 150px;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 78px;
+    color: $c-link-main;
+
+    @include desktop_1200 {
+        margin-right: 50px;
+    }
+
+    @include tablets_1024 {
+        margin-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    @include phones__768 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+
+.history__description {
+    max-width: 650px;
+    font-size: 24px;
+    line-height: 34px;
+    color: $c-text-second;
+
+    @include desktop_1200 {
+        max-width: 630px;
+    }
+
+    @include tablets_1024 {
+        max-width: 100%;
+    }
+
+    @include phones__768 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}

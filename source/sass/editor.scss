@@ -1,0 +1,132 @@
+.editor {
+    margin-bottom: 200px;
+
+    @include phones__768 {
+        margin-bottom: 50px;
+    }
+}
+
+.editor__title {
+    margin-bottom: 80px;
+
+    @include phones__768 {
+        margin-bottom: 40px;
+    }
+}
+
+.editor__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablets_1024 {
+        align-items: flex-start;
+    }
+
+    @include phones__768 {
+        flex-direction: column;
+    }
+}
+
+.editor__img-box {
+    flex-shrink: 0;
+    margin-right: 120px;
+
+    @include desktop_1200 {
+        margin-right: 60px;
+    }
+
+    @include tablets_1024 {
+        width: 40%;
+    }
+
+    @include phones__768 {
+        width: 60%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.editor__name {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 45px;
+
+    @include phones__768 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+.editor__spec {
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: $c-link-main;
+
+    @include phones__768 {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 30px;
+    }
+}
+
+.editor__text {
+    margin-bottom: 90px;
+    font-size: 22px;
+    line-height: 33px;
+    color: $c-text-second;
+
+    @include phones__768 {
+        margin-bottom: 40px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.editor__link-box {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+
+    @include desktop_1200 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.editor__link {
+    position: relative;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: $c-link-main;
+    text-decoration: none;
+    transition: 0.5s;
+
+    @include desktop_1200 {
+        margin-bottom: 20px;
+    }
+
+    @include phones__768 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &:before {
+        @include pseudo;
+        top: 50%;
+        right: -20px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 1px solid $c-border;
+        border-right: 1px solid $c-border;
+        transform: translate(0, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
